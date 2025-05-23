@@ -24,7 +24,16 @@ $categorias = $categoriaModel->getAll();
 
 <form method="POST" action="../controllers/gastosController.php">
     <label>Mes:</label>
-    <input type="text" name="month" required><br>
+        <select name="month" required>
+            <option value="">-- Selecciona un mes --</option>
+            <?php
+            $meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+            foreach ($meses as $mes) {
+                $selected = ($mes === $selectedMonth) ? 'selected' : '';
+                echo "<option value=\"$mes\" $selected>$mes</option>";
+            }
+            ?>
+        </select>
 
     <label>Año:</label>
     <input type="number" name="year" required><br>

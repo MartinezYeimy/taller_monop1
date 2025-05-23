@@ -35,8 +35,17 @@ if ($isEdit) {
 
     <form method="POST" action="<?= $isEdit ? '../views/actions/updateIngreso.php' : '../views/actions/saveIngreso.php' ?>">
         <label>Mes:</label>
-        <input type="text" name="month" value="<?= htmlspecialchars($month) ?>" <?= $isEdit ? 'readonly' : '' ?> required><br>
-
+        <select name="month" required>
+            <option value="">-- Selecciona un mes --</option>
+            <?php
+            $meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+            foreach ($meses as $mes) {
+                $selected = ($mes === $selectedMonth) ? 'selected' : '';
+                echo "<option value=\"$mes\" $selected>$mes</option>";
+            }
+            ?>
+        </select>
+        
         <label>Año:</label>
         <input type="number" name="year" value="<?= htmlspecialchars($year) ?>" <?= $isEdit ? 'readonly' : '' ?> required><br>
 

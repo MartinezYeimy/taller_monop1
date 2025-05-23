@@ -26,12 +26,13 @@ if ($isEdit) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title><?= $isEdit ? 'Editar ingreso' : 'Registrar ingreso' ?></title>
+    <title>Registrar ingreso</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
 <div class="contenedor">
-    <h2><?= $isEdit ? '✏️ Editar ingreso' : '➕ Registrar ingreso' ?></h2>
+    <h2>➕ Registrar ingreso</h2>
 
     <form method="POST" action="<?= $isEdit ? '../views/actions/updateIngreso.php' : '../views/actions/saveIngreso.php' ?>">
         <label>Mes:</label>
@@ -46,6 +47,7 @@ if ($isEdit) {
             ?>
         </select>
         
+
         <label>Año:</label>
         <input type="number" name="year" value="<?= htmlspecialchars($year) ?>" <?= $isEdit ? 'readonly' : '' ?> required><br>
 

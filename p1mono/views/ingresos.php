@@ -37,7 +37,7 @@ $reportes = $reportModel->getAllReports();
             <td><?= $reporte['year'] ?></td>
             <td>$<?= number_format($ingreso['value'], 2, ',', '.') ?></td>
             <td>
-               <a href="form_ingreso.php?month=<?= $reporte['month'] ?>&year=<?= $reporte['year'] ?>&edit=1">✏️ Editar</a>
+               <a href="form_ingresos_edit.php?month=<?= $reporte['month'] ?>&year=<?= $reporte['year'] ?>&edit=1">✏️ Editar</a>
             </td>
         </tr>
         

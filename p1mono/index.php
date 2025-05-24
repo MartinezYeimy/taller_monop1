@@ -19,7 +19,7 @@
         </nav>
 
         <footer>
-            <p>...</p>
+            <p></p>
         </footer>
     </div>
 </body>

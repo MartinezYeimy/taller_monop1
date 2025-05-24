@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #2980b9;
     margin: 0;
     padding: 0;
 }
@@ -8,14 +8,20 @@ body {
 .contenedor {
     max-width: 600px;
     margin: 50px auto;
-    background: white;
+    background: #ccd2d4da;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 1px 5px 8px #5a5757;
 }
 
 h1 {
     text-align: center;
+    color: #3a3a3a;
+}
+
+h2 {
+    text-align: center;
+    color: #3a3a3a;
 }
 
 nav ul {
@@ -29,16 +35,25 @@ nav ul li {
 }
 
 nav ul li a {
+
     text-decoration: none;
-    background: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
+    background: #fcfcfc;
+    color:#2d3133;
+    margin: 1px;
+    padding: 5px 10px;
+    border-radius: 8px;
     display: inline-block;
+    border-style:solid;
+    border-color: #7e7e7e75;
 }
 
 nav ul li a:hover {
-    background: #2980b9;
+    background:  #2d2d33;
+    border-radius: 10px;
+    border-style:ridge ;
+    border-color: #ffffff;
+    color: white;
+    transition: all 0.7s;
 }
 
 footer {
@@ -52,22 +67,23 @@ footer {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 10px auto; 
 }
 
 table th, table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+    background-color : #ccd2d4;
+    border: 1px solid #000000;
+    padding: 2px 0px;
+    text-align: center;
 }
 
 table th {
-    background-color: #3498db;
-    color: white;
+    background-color: #8bb672;
+    color: rgb(218, 218, 218);
 }
 
 table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #b99d9d;
 }
 
 table tr:hover {
@@ -107,16 +123,16 @@ form input[type="submit"]:hover {
 /* Estilos para botones */
 button {
     background-color: #3498db;
-    color: white;
+    color: rgb(190, 188, 188);
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #9b5527;
+    transition: background-color 0.3s;
 }
 
 /* Estilos para mensajes */

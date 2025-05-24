@@ -19,39 +19,39 @@ $categorias = $categoriaModel->getAll();
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    
-<h2>➕ Registrar gasto</h2>
+<div class="contenedor">
+    <h2>➕ Registrar gasto</h2>
 
-<form method="POST" action="../controllers/gastosController.php">
-    <label>Mes:</label>
-        <select name="month" required>
-            <option value="">-- Selecciona un mes --</option>
-            <?php
-            $meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-            foreach ($meses as $mes) {
-                $selected = ($mes === $selectedMonth) ? 'selected' : '';
-                echo "<option value=\"$mes\" $selected>$mes</option>";
-            }
-            ?>
-        </select>
+    <form method="POST" action="../controllers/gastosController.php">
+        <label>Mes:</label>
+            <select name="month" required>
+                <option value="">-- Selecciona un mes --</option>
+                <?php
+                $meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+                foreach ($meses as $mes) {
+                    $selected = ($mes === $selectedMonth) ? 'selected' : '';
+                    echo "<option value=\"$mes\" $selected>$mes</option>";
+                }
+                ?>
+            </select>
 
-    <label>Año:</label>
-    <input type="number" name="year" required><br>
+        <label>Año:</label>
+        <input type="number" name="year" required><br>
 
-    <label>Categoría:</label>
-    <select name="idCategory" required>
-        <?php foreach ($categorias as $cat): ?>
-            <option value="<?= $cat['id'] ?>"><?= $cat['name'] ?></option>
-        <?php endforeach; ?>
-    </select><br>
+        <label>Categoría:</label>
+        <select name="idCategory" required>
+            <?php foreach ($categorias as $cat): ?>
+                <option value="<?= $cat['id'] ?>"><?= $cat['name'] ?></option>
+            <?php endforeach; ?>
+        </select><br>
 
-    <label>Valor:</label>
-    <input type="number" name="value" step="0.01" min="0.01" required><br><br>
+        <label>Valor:</label>
+        <input type="number" name="value" step="0.01" min="0.01" required><br><br>
 
-    <input type="submit" value="Registrar">
-</form>
+        <input type="submit" value="Registrar">
+    </form>
 
-<a href="gastos.php">🔙 Volver</a>
-
+    <a href="gastos.php">🔙 Volver</a>
+</div>
 </body>
 </html>
